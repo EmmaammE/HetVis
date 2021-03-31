@@ -229,6 +229,13 @@ DATA_DIR
       }
       ```
 
+### Preprocess
+
+Set `dataset` and `client_names` in the file `prepocess.py`, then
+``` cmd
+python preprocess.py
+```
+
 ### Run
 
 #### Only for Development
