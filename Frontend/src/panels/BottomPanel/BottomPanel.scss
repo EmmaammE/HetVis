@@ -1,0 +1,62 @@
+#BottomPanel {
+  padding: 10px;
+  grid-row: 2;
+  grid-column: 1 / -1;
+  background-color: var(--default-color);
+  position: relative;
+
+  .tip {
+    display: flex;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+
+  .lines {
+    .domain {
+      opacity: 0;
+    }
+
+    .tick line {
+      stroke: var(--lines-color);
+    }
+  }
+
+  .brush {
+    rect {
+      stroke: var(--primary-color);
+      fill: var(--primary-color);
+      fill-opacity: 1 !important;
+    }
+  }
+
+  .tooltip {
+    position: absolute;
+    color: #666;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1em;
+    transition: opacity 300ms ease-in-out;
+    margin: 0 0 15px 15px;
+    width: 50px;
+    cursor: pointer;
+
+    // p {
+    //   transform: scale(0.75);
+    //   line-height: 0.75em;
+    // }
+
+    .scroll-panel {
+      overflow: auto;
+      height: 90px;
+    }
+
+    .tip-text {
+      height: 100%;
+      word-break: break-word;
+      font-size: 12px;
+    }
+  }
+}

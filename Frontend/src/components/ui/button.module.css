@@ -1,0 +1,20 @@
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  min-height: 2.2rem;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: var(--background-color) none;
+  padding: 0 1rem;
+  text-transform: none;
+  text-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 var(--shadow-color) inset;
+  user-select: none;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease,
+    background 0.1s ease;
+}

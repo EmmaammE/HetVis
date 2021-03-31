@@ -1,0 +1,19 @@
+.axes {
+  text {
+    user-select: none;
+  }
+
+  line {
+    stroke-opacity: 0.6;
+    stroke: rgb(60, 60, 60);
+    stroke-width: 2px;
+    shape-rendering: crispEdges;
+  }
+}
+
+.scatter-box {
+  // overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

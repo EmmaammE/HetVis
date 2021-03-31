@@ -1,0 +1,14 @@
+.label {
+  text-anchor: left;
+  alignment-baseline: baseline;
+  fill: rgba(30, 30, 30, 0.3);
+}
+
+.overlay {
+  /* fill: lightslategray; */
+
+  /* stroke: lightslategray; */
+  fill-opacity: 0.2;
+  stroke: #111;
+  fill: none;
+}

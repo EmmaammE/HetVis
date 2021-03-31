@@ -1,0 +1,119 @@
+#LeftPanel {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p.title {
+    background: #dfd0c2;
+    line-height: 3vh;
+    text-align: center;
+  }
+
+  #info-two {
+    margin: 3px 0;
+
+    .next-line {
+      text-indent: 2.3em;
+    }
+  }
+
+  .range-brush {
+    .selection {
+      fill: url(#range);
+      fill-opacity: 1;
+      stroke: none;
+    }
+
+    .selection,
+    .overlay {
+      pointer-events: none;
+    }
+  }
+
+  .my-handle {
+    user-select: none;
+    pointer-events: none;
+    fill: #fff;
+    stroke: #000;
+  }
+
+  .update-wrapper {
+    display: flex;
+
+    p {
+      line-height: 20px;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .overview-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .layer-select {
+      .select-dropdown {
+        height: 22px;
+        margin: 0 40px 0 0;
+
+        .select {
+          width: 100px;
+        }
+      }
+    }
+
+    // .dashed-divider {
+    //   margin: 15px 0;
+    // }
+
+    .overview-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      // Ovewview.tsx
+      #Overview {
+        // padding: 10px 0;
+        // flex: 0 1 23vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+        // svg {
+        // margin: 20px 5px;
+        // }
+      }
+
+      .info {
+        // padding: 10px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .legend-wrapper p {
+          white-space: nowrap;
+          margin-top: -2px;
+        }
+
+        .tip {
+          p:first-child {
+            text-align: right;
+          }
+        }
+
+        .cosine-legend {
+          margin-left: 8px;
+        }
+
+        // p:first-child {
+        //   text-align: right;
+        // }
+      }
+    }
+  }
+}

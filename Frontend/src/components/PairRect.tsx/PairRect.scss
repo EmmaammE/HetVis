@@ -1,0 +1,54 @@
+.pair-rect-container {
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+  cursor: pointer;
+  padding: 5px;
+
+  &:active,
+  &:focus {
+    // outline: 1px solid #777;
+    outline: none;
+    background: #dfd0c2;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      span:nth-child(1) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    margin: 5px 0;
+    position: relative;
+
+    .names {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-left: 5px;
+
+      p {
+        line-height: 22.5px;
+      }
+    }
+
+    .svg-wrapper {
+      flex: 88% 0 0;
+      position: relative;
+
+      .pair-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // border: 1px solid #000;
+      }
+    }
+  }
+}
