@@ -2,7 +2,7 @@
 
 Here is the official implementation of system prototype in paper *"A Visual Analysis Approach for Identifying Heterogeneity in Federated Learning"*.
 
-We implemented the frontend and backend seprately. They could be found in the folder [`/Frontend`](./Frontend/) and [`/Backend`](./Backend/).
+We implemented the frontend and backend seprately. They could be found in the folder [`/Frontend`](Frontend/) and [`/Backend`](./Backend/).
 
 
 ## Description
