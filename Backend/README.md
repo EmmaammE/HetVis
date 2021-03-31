@@ -2,7 +2,7 @@
 
 Here is the official implementation of system backend in paper *"A Visual Analysis Approach for Identifying Heterogeneity in Federated Learning"*.
 
-We implemented the frontend and backend seprately. The implementation of the frontend could be found [here]('../Frontend/').
+We implemented the frontend and backend seprately. The implementation of the frontend could be found [here](../Frontend/).
 
 ## Features
  <!-- - Parameter projection in federated learning process -->
