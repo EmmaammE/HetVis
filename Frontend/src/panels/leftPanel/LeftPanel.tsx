@@ -79,6 +79,11 @@ const labelNames: any = {
   cifar10: ['plane', 'car', 'ship', 'truck'],
 };
 
+const clientOfDataset: any = {
+  minist: 0,
+  face: 0,
+  cifar10: 1,
+};
 function LeftPanel() {
   const [index, setIndex] = useState(-1);
 
@@ -124,10 +129,6 @@ function LeftPanel() {
   // 修改client
   const onDropdownChange = (i: any) => {
     setIndex(i);
-    // console.log('test')
-    // if (index !== -1) {
-
-    // }
   };
 
   const onDatasetChange = (i: any) => {
@@ -147,7 +148,6 @@ function LeftPanel() {
       },
       body: JSON.stringify({
         datasetName: datasets[i],
-        // datasetName: datasetNames,
       }),
     })
       .then((res2) => res2.json())
@@ -181,6 +181,9 @@ function LeftPanel() {
 
         setLabelNames(labelNames[datasets[i]]);
         // setLevel(HTTP_LEVEL.datasets+1);
+
+        // chose the client
+        setIndex(clientOfDataset[datasets[i]]);
       });
   };
 
@@ -254,12 +257,11 @@ function LeftPanel() {
 
   return (
     <div id="LeftPanel" className="panel">
-      <h2>FL Process Monitor</h2>
+      <h2>Learning Process Monitor</h2>
 
       <div className="content">
         <div className="info-container">
           <h3>Model Information</h3>
-          {/* <p className='title'>Model Information Panel</p> */}
           <div>
             <div className="info-row">
               <span>Name of dataset: </span>
@@ -272,20 +274,19 @@ function LeftPanel() {
             <p>Label: {info.labels} </p>
             <p>#Dimensions: {info.dimensions}</p>
             <p>#Clients: {info.numberOfClients} </p>
-            <p>Current communication round: {info.communicationRounds}</p>
+            <p>Aggregation algorithm: FedAvg</p>
+            <p>#Communication rounds: {info.communicationRounds}</p>
           </div>
 
           <div id="info-two">
-            {/* <p className='title'>Local Information Panel</p> */}
             <h3>Local Information</h3>
 
             <div className="info-row">
-              <span>Name of this client: </span>
-              <Dropdown items={names} setIndex={onDropdownChange} index={index} />
+              <span>Client name:&nbsp;</span>
+              {index !== -1 && names.length ? names[index] : ''}
             </div>
-            <p>Size of the local data: </p>
-            <p>{dataSize.trainSize || ''} records in the training set</p>
-            <p>{dataSize.testSize || ''} records in the test set</p>
+            <p>Training set: {`${dataSize.trainSize.toLocaleString()} records` || ''}</p>
+            <p>Test set: {`${dataSize.testSize.toLocaleString()} records` || ''}</p>
           </div>
         </div>
 
