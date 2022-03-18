@@ -80,7 +80,7 @@ const labelNames: any = {
 };
 
 const clientOfDataset: any = {
-  minist: 0,
+  mnist: 0,
   face: 0,
   cifar10: 1,
 };
